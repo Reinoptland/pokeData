@@ -37,3 +37,9 @@ console.log(pokemons.length); // 151
 // "weight": "6.9 kg", -> "weight": 6.9
 // "egg": "2 km", -> "egg": 2000,
 // "egg": "Not in Eggs", -> "egg": null
+// Input: pokemons [{}, {}, {},]
+// Output: normalized pokemons [{}, {}, {},]
+
+// 9. Sort the pokemon array by the names of the pokemon
+// Input: pokemons [{}, {}, {},]
+// Output: sorted pokemons [{name: Abra}, {}, ... {name: Zubat}]
