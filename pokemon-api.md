@@ -44,10 +44,13 @@ Example requests:
 GET http://localhost:4000/pokemons
 ```
 
+count: total amount in the dataset
+pokemons: all 151 pokemons
+
 ```json
 {
-  "count": 151, // total amount in the dataset
-  "pokemons": [{}, {}, {}] // all 151 pokemons
+  "count": 151,
+  "pokemons": [{}, {}, {}]
 }
 ```
 
@@ -64,10 +67,13 @@ Adding limit and offset as a querystring is optional. If you leave them out, ass
 GET http://localhost:4000/pokemons?limit=20&offset=0
 ```
 
+count: total amount in the dataset
+pokemons: first 20 pokemons
+
 ```json
 {
-  "count": 151, // total amount in the dataset
-  "pokemons": [{"id": 1}, {"id": 2} ... {"id": 20}] // first 20 pokemons
+  "count": 151,
+  "pokemons": [{"id": 1}, {"id": 2} ... {"id": 20}]
 }
 ```
 
@@ -75,10 +81,13 @@ GET http://localhost:4000/pokemons?limit=20&offset=0
 GET http://localhost:4000/pokemons?limit=20&offset=50
 ```
 
+count: total amount in the dataset
+pokemons: the next 20 pokemons, starting from counting index 50 (offset 50)
+
 ```json
 {
-  "count": 151, // total amount in the dataset
-  "pokemons": [{"id": 51}, {"id": 52} ... {"id": 70}] // the next 20 pokemons, starting from counting index 50 (offset 50)
+  "count": 151,
+  "pokemons": [{"id": 51}, {"id": 52} ... {"id": 70}]
 }
 ```
 
@@ -92,9 +101,12 @@ req.query.type -> which type of pokemon are we requesting
 GET http://localhost:4000/pokemons?type=Grass
 ```
 
+count: total amount of pokemon matching this query
+pokemons: all pokemon matching this query
+
 ```json
 {
-  "count": 14, // total amount of pokemon matching this query
+  "count": 14, //
   "pokemons": [{"id": 1}, {"id": 2} ... {"id": 114}]
 }
 ```
@@ -107,10 +119,13 @@ We want to make it possible for api users to specify how the data should be sort
 GET http://localhost:4000/pokemons?sortBy=id
 ```
 
+count: total amount in the dataset
+pokemons: all 151 pokemons
+
 ```json
 {
-  "count": 151, // total amount in the dataset
-  "pokemons": [{ "id": 1 }, ...{ "id": 151 }] // all 151 pokemons
+  "count": 151,
+  "pokemons": [{ "id": 1 }, ...{ "id": 151 }]
 }
 ```
 
@@ -118,10 +133,13 @@ GET http://localhost:4000/pokemons?sortBy=id
 GET http://localhost:4000/pokemons?sortBy=name
 ```
 
+count: total amount in the dataset
+pokemons: all 151 pokemons
+
 ```json
 {
-  "count": 151, // total amount in the dataset
-  "pokemons": [{ "name": "Abra" }, ...{ "name": "Zubat" }] // all 151 pokemons
+  "count": 151,
+  "pokemons": [{ "name": "Abra" }, ...{ "name": "Zubat" }]
 }
 ```
 
